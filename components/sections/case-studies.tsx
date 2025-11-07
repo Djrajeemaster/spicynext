@@ -52,7 +52,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: { duration: 0.5, ease: [0, 0, 0.2, 1] }, // Changed 'easeOut' to cubic-bezier array
   },
 };
 
