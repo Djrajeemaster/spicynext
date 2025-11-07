@@ -1,53 +1,53 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const demoProjects = [
-  {
-    title: 'Saffron Spice',
-    description: 'A modern, elegant website for an upscale Indian restaurant.',
-    image: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    link: '/demos/saffron-spice',
-    tags: ['Restaurant', 'UI/UX', 'Reservations'],
-  },
-  {
-    title: 'Desi Threads',
-    description: 'A stylish e-commerce store for a modern Indian fashion brand.',
-    image: 'https://images.pexels.com/photos/4355620/pexels-photo-4355620.jpeg?auto=compress&cs=tinysrgb&w=800',
-    link: '/demos/desi-threads',
-    tags: ['E-commerce', 'Fashion', 'Video Banner'],
-  },
-  {
-    title: 'Aura Homes',
-    description: 'A premium website for a modern real estate project.',
-    image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    link: '/demos/aura-homes',
-    tags: ['Real Estate', 'Lead Gen', 'Gallery'],
-  },
-  {
-    title: 'Dr. Anjali Sharma',
-    description: 'A clean and trustworthy website for a healthcare professional.',
-    image: 'https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    link: '/demos/dr-anjali-sharma',
-    tags: ['Healthcare', 'Appointments', 'Professional'],
-  },
-  {
-    title: 'Studio Verde',
-    description: 'A sophisticated portfolio for an interior design studio.',
-    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    link: '/demos/studio-verde',
-    tags: ['Portfolio', 'Creative', 'Interior Design'],
-  },
-  {
-    title: 'Pathshala',
-    description: 'An informative website for an educational coaching institute.',
-    image: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    link: '/demos/pathshala',
-    tags: ['Education', 'Institute', 'Admissions'],
-  },
+	{
+		title: 'Saffron Spice',
+		description: 'A modern, elegant website for an upscale Indian restaurant.',
+		image: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		link: '/demos/saffron-spice',
+		tags: ['Restaurant', 'UI/UX', 'Reservations'],
+	},
+	{
+		title: 'Desi Threads',
+		description: 'A stylish e-commerce store for a modern Indian fashion brand.',
+		image: 'https://images.pexels.com/photos/4355620/pexels-photo-4355620.jpeg?auto=compress&cs=tinysrgb&w=800',
+		link: '/demos/desi-threads',
+		tags: ['E-commerce', 'Fashion', 'Video Banner'],
+	},
+	{
+		title: 'Aura Homes',
+		description: 'A premium website for a modern real estate project.',
+		image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		link: '/demos/aura-homes',
+		tags: ['Real Estate', 'Lead Gen', 'Gallery'],
+	},
+	{
+		title: 'Dr. Anjali Sharma',
+		description: 'A clean and trustworthy website for a healthcare professional.',
+		image: 'https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		link: '/demos/dr-anjali-sharma',
+		tags: ['Healthcare', 'Appointments', 'Professional'],
+	},
+	{
+		title: 'Studio Verde',
+		description: 'A sophisticated portfolio for an interior design studio.',
+		image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		link: '/demos/studio-verde',
+		tags: ['Portfolio', 'Creative', 'Interior Design'],
+	},
+	{
+		title: 'Pathshala',
+		description: 'An informative website for an educational coaching institute.',
+		image: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		link: '/demos/pathshala',
+		tags: ['Education', 'Institute', 'Admissions'],
+	},
 ];
 
 const containerVariants = {
@@ -62,12 +62,12 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: [0, 0, 0.2, 1] }, // Changed 'easeOut' to cubic-bezier array
-  },
+	hidden: { opacity: 0, y: 20 },
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.5, ease: easeOut },
+	},
 };
 
 export function Demos() {

@@ -15,7 +15,7 @@ import {
   Users
 } from 'lucide-react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 
 const services = [
   {
@@ -91,7 +91,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: [0, 0, 0.2, 1] }, // Changed 'easeOut' to cubic-bezier array
+    transition: { duration: 0.8, ease: easeOut },
   },
 };
 

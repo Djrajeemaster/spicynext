@@ -2,7 +2,7 @@
 
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { motion } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -86,7 +86,7 @@ const itemVariants = {
 	visible: {
 		opacity: 1,
 		y: 0,
-		transition: { duration: 0.5, ease: [0, 0, 0.2, 1] }, // Changed 'easeOut' to cubic-bezier array
+		transition: { duration: 0.5, ease: easeOut },
 	},
 };
 

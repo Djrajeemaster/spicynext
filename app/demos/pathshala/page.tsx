@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 import Link from 'next/link';
 import { BookOpen, UserCheck, Award, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -9,17 +9,51 @@ import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
 
 const courses = [
-  { name: 'IIT-JEE Foundation (Class 9-10)', desc: 'Building strong fundamentals for future success.' },
-  { name: 'NEET-UG Preparation (Class 11-12)', desc: 'Comprehensive coaching for medical aspirants.' },
-  { name: 'JEE Main & Advanced (12th & Dropper)', desc: 'Intensive program for top engineering colleges.' },
-  { name: 'Olympiads & NTSE', desc: 'Specialized training for competitive school exams.' },
+	{
+		name: 'IIT-JEE Foundation (Class 9-10)',
+		desc: 'Building strong fundamentals for future success.',
+	},
+	{
+		name: 'NEET-UG Preparation (Class 11-12)',
+		desc: 'Comprehensive coaching for medical aspirants.',
+	},
+	{
+		name: 'JEE Main & Advanced (12th & Dropper)',
+		desc: 'Intensive program for top engineering colleges.',
+	},
+	{
+		name: 'Olympiads & NTSE',
+		desc: 'Specialized training for competitive school exams.',
+	},
 ];
 
 const faculty = [
-  { name: 'Dr. R. Sharma', subject: 'Physics', qualification: 'PhD, IIT Bombay', image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=800' },
-  { name: 'Prof. S. Verma', subject: 'Chemistry', qualification: 'M.Sc, Delhi University', image: 'https://images.pexels.com/photos/1181395/pexels-photo-1181395.jpeg?auto=compress&cs=tinysrgb&w=800' },
-  { name: 'Mr. A. Khan', subject: 'Mathematics', qualification: 'B.Tech, IIT Kanpur', image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=800' },
-  { name: 'Ms. P. Reddy', subject: 'Biology', qualification: 'M.Phil, JNU', image: 'https://images.pexels.com/photos/764529/pexels-photo-764529.jpeg?auto=compress&cs=tinysrgb&w=800' },
+	{
+		name: 'Dr. R. Sharma',
+		subject: 'Physics',
+		qualification: 'PhD, IIT Bombay',
+		image:
+			'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=800',
+	},
+	{
+		name: 'Prof. S. Verma',
+		subject: 'Chemistry',
+		qualification: 'M.Sc, Delhi University',
+		image:
+			'https://images.pexels.com/photos/1181395/pexels-photo-1181395.jpeg?auto=compress&cs=tinysrgb&w=800',
+	},
+	{
+		name: 'Mr. A. Khan',
+		subject: 'Mathematics',
+		qualification: 'B.Tech, IIT Kanpur',
+		image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=800',
+	},
+	{
+		name: 'Ms. P. Reddy',
+		subject: 'Biology',
+		qualification: 'M.Phil, JNU',
+		image: 'https://images.pexels.com/photos/764529/pexels-photo-764529.jpeg?auto=compress&cs=tinysrgb&w=800',
+	},
 ];
 
 export default function PathshalaPage() {
@@ -50,19 +84,25 @@ export default function PathshalaPage() {
       <section className="relative bg-orange-50 pt-20">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 items-center">
           <div className="py-16">
-            <motion.h1 
+            <motion.h1
               className="text-5xl md:text-6xl font-extrabold text-orange-900"
-              initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.5, duration: 0.8, ease: [0, 0, 0.2, 1] }}
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                delay: 0.5,
+                duration: 0.8,
+                ease: easeOut,
+              }}
             >
               Shape Your Future, <br/>Achieve Your Dreams.
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="text-xl text-gray-700 mt-6"
-              initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8, ease: [0, 0, 0.2, 1] }}
+              initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8, ease: easeOut }}
             >
               India's leading coaching institute for competitive exams. Join us to unlock your potential.
             </motion.p>
-            <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1.1, duration: 0.8, ease: [0, 0, 0.2, 1] }}>
+            <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1.1, duration: 0.8, ease: easeOut }}>
               <Button asChild size="lg" className="mt-8 bg-orange-600 hover:bg-orange-700 text-lg py-7 px-9">
                 <Link href="#courses">Explore Courses</Link>
               </Button>
