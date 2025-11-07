@@ -50,11 +50,23 @@ export default function PathshalaPage() {
       <section className="relative bg-orange-50 pt-20">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 items-center">
           <div className="py-16">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-orange-900">Shape Your Future, <br/>Achieve Your Dreams.</h1>
-            <p className="text-xl text-gray-700 mt-6">India's leading coaching institute for competitive exams. Join us to unlock your potential.</p>
-            <Button asChild size="lg" className="mt-8 bg-orange-600 hover:bg-orange-700 text-lg py-7 px-9">
-              <Link href="#courses">Explore Courses</Link>
-            </Button>
+            <motion.h1 
+              className="text-5xl md:text-6xl font-extrabold text-orange-900"
+              initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.5, duration: 0.8, ease: [0, 0, 0.2, 1] }}
+            >
+              Shape Your Future, <br/>Achieve Your Dreams.
+            </motion.h1>
+            <motion.p 
+              className="text-xl text-gray-700 mt-6"
+              initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8, ease: [0, 0, 0.2, 1] }}
+            >
+              India's leading coaching institute for competitive exams. Join us to unlock your potential.
+            </motion.p>
+            <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1.1, duration: 0.8, ease: [0, 0, 0.2, 1] }}>
+              <Button asChild size="lg" className="mt-8 bg-orange-600 hover:bg-orange-700 text-lg py-7 px-9">
+                <Link href="#courses">Explore Courses</Link>
+              </Button>
+            </motion.div>
           </div>
           <div className="hidden md:block">
             <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Student studying"/>
